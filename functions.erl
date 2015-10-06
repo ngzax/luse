@@ -17,8 +17,22 @@ valid_time({Date = {Y,M,D}, Time = {H,Min,S}}) ->
 valid_time(_) ->
   io:format("Stop feeding me wrong data!~n").
 
+%% The , below is andalso
 right_age(X) when X >= 16, X =< 104 ->
   true;
 right_age(_) ->
   false.
 
+%% The ; below is orelse
+wrong_age(X) when X < 16; X > 104 ->
+true;
+wrong_age(_) ->
+false.
+
+insert(X,[]) -> 
+  [X];
+insert(X,Set) ->
+  case lists:member(X,Set) of
+    true  -> Set;
+    false -> [X|Set]
+  end.
