@@ -36,3 +36,6 @@ insert(X,Set) ->
     true  -> Set;
     false -> [X|Set]
   end.
+
+pop([H|T]) -> 
+  {H, lists:delete(H, T)}.
