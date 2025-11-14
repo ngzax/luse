@@ -4,7 +4,7 @@
 -vsn(1).
 
 add(A, B) ->
-A + B.
+  A + B.
 
 dbl(X) ->
   2 * X.

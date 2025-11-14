@@ -1,10 +1,11 @@
+.concrete/DEV_MODE
+.DS_Store
 .eunit
-deps
+.rebar
 *.o
 *.beam
 *.plt
+deps
 erl_crash.dump
 ebin
 rel/example_project
-.concrete/DEV_MODE
-.rebar
